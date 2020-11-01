@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<link rel="stylesheet" href="styles.css">
+		<meta charset="UTF-8">
+		<meta name="keywords" content="HTML, CSS">
+		<meta name="author" content="Marek Giel">
+		<title>27-10-2020</title>
+	</head>
+	<body>
+		<!-- Zad 1 -->
+		<form id="calculator">
+			<input type="text" id="a" placeholder="liczba A" />
+			<input type="text" id="b" placeholder="liczba B" />
+			<input type="text" id="result" placeholder="=" disabled="disabled" /></br>
+			<button type="button" onclick="Calculator(this.innerHTML)">+</button> 
+			<button type="button" onclick="Calculator(this.innerHTML)">-</button>
+			<button type="button" onclick="Calculator(this.innerHTML)">x</button>   
+			<button type="button" onclick="Calculator(this.innerHTML)">/</button>
+			<button type="button" onclick="Calculator(this.innerHTML)">%</button>
+		</form>
+		<!-- Zad 2 -->
+		<form id="konwerter1">
+			<input type="text" id="celsius" placeholder="Temperatura C" />
+			<button type="button" onclick="Converter(this.innerHTML)">Przelicz</button>
+			<input type="text" id="wynik" placeholder="=" disabled="disabled" /></br> 
+		</form>
+		<!-- Zad 3 -->
+		<form id="konwerter2">
+			<input type="text" id="celsjusz" placeholder="Temperatura C" />
+			<button type="button" onclick="PrzeliczC(this.innerHTML)">Przelicz na F</button> 
+			<input type="text" id="farenheit" placeholder="Temperatura F" />
+			<button type="button" onclick="PrzeliczF(this.innerHTML)">Przelicz na C</button> 
+		</form>
+		<script>
+			//Zadanie 1
+			function Calculator(operator) 
+			{
+				var a = document.getElementById('a').value;
+				var b = document.getElementById('b').value;  
+				if((isNaN(a))||(isNaN(b))){
+					document.getElementById('result').value = '= ' + 'Wprowadź prawidłowe dane';
+				}else if((a=='')||(b=='')){
+					document.getElementById('result').value = '= ' + 'Wprowadź obie liczby';
+				}else{
+					switch(operator) 
+				{
+					case '+':
+						var result = parseFloat(a) + parseFloat(b);         
+					break;
+					case '-':
+						var result = parseFloat(a) - parseFloat(b);         
+					break;  
+					case 'x':
+						var result = parseFloat(a) * parseFloat(b);         
+					break;  
+					case '/':
+						var result = parseFloat(a) / parseFloat(b);         
+					break;    
+					case '%':
+						var result = parseFloat(a) % parseFloat(b);         
+					break;   
+				}
+				document.getElementById('result').value = '= ' + result;
+			}
+		}
+		//Zadanie 2
+		function Converter(operator){
+			var celsius = document.getElementById('celsius').value;
+			if(operator){
+				wynik = (parseFloat(celsius)*1.8) + 32;
+			}
+			document.getElementById('wynik').value = '= ' + wynik;
+		}
+		//Zadanie 3
+		function PrzeliczC(operator){
+			var celsius = document.getElementById('celsjusz').value;
+			if(operator){
+				wynik = (parseFloat(celsius)*1.8) + 32;
+			}
+			document.getElementById('farenheit').value = wynik;
+		}
+		function PrzeliczF(operator){
+			var farenheit = document.getElementById('farenheit').value;
+			if(operator){
+				wynik = (parseFloat(farenheit)-32)/1.8 ;
+			}
+			document.getElementById('celsjusz').value = wynik;
+		}
+
+		</script>
+	</body>
+</html>
