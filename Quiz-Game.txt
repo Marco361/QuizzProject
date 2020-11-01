@@ -1,0 +1,32 @@
+Quiz Game
+Utwórz program, który będzie czytać quiz dostarczony w pliku CSV (więcej szczegółów poniżej), a następnie poda quiz użytkownikowi, śledząc, ile pytań odpowie poprawnie, a ile błędnych.
+
+Plik CSV powinien mieć domyślną nazwę problems.csv (przykład pokazany poniżej).
+
+Plik CSV będzie miał format taki jak poniżej, gdzie pierwsza kolumna to pytanie, a druga kolumna w tym samym wierszu to odpowiedź na to pytanie.	
+		
+5+5,10
+7+3,10
+1+1,2
+8+3,11
+1+2,3
+8+6,14
+3+1,4
+1+4,5
+5+1,6
+2+3,5
+3+3,6
+2+4,6
+5+2,7
+
+Możesz założyć, że quizy będą stosunkowo krótkie (<100 pytań) i będą zawierały pojedyncze słowa / liczby.
+
+Na koniec quizu program powinien wypisać całkowitą liczbę poprawnych pytań i całkowitą liczbę pytań. Pytania, na które udzielono nieprawidłowych odpowiedzi, są uważane za nieprawidłowe.
+
+
+Kolejne rozszerzenia programu:
+1. Uzytkownik powinnien mieć określony czas na odpowiedź w kazdym pytaniu domyślnie 10 sekund. Jezeli czas się skończy uzytkownik powinnien od razu otrzymać informację, że pytanie zostaje niezaliczone. 
+2. Dodaj interfejs graficzny, aby program nie opierał się tylko o konsole 
+3. Podczas uruchamiania programu użytkownik powinnien móc podawać nazwę pliku oraz dopuszczalny czas odpowiedzi (w formie flagi) 	
+4. Każde uruchomienie programu powinno prezentowac pytania w innej kolejności.  
+	
