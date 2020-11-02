@@ -7,14 +7,14 @@ with open('problems.csv') as csv_file:
     poprawne = 0
     wszystkie = 0
     for row in csv_reader:
-        print(row[0])
-        odpowiedz = input("odpowiedz:\n")
+        print('Pytanie:',row[0])
+        odpowiedz = input("Odpowiedz: ")
         if odpowiedz == row[1]:
-            print('True')
+            print('Dobrze')
             line_count += 1
             poprawne += 1
         else:
-            print('False')
+            print('Źle')
             line_count += 1
 wszystkie = line_count
-print(poprawne,'/',wszystkie)
+print('Poprawne: ',poprawne,'/',wszystkie)
