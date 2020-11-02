@@ -11,3 +11,8 @@ with open('problems.csv') as csv_file:
             print(f'\t dla pytania {row[0]} odzpowiedzia jest {row[1]}')
             line_count += 1
     print(f'Processed {line_count} lines.')
+
+odpowiedz = '7'
+line_count = 1
+if line_count == 1 and row[1] == odpowiedz:
+    print('True')
